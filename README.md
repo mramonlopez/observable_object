@@ -1,1 +1,0 @@
-# observable_model

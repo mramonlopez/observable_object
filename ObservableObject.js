@@ -71,5 +71,3 @@ ObservableObject.prototype.set = function (properyList) {
     }
 };
 /* eslint-enable no-underscore-dangle */
-
-module.exports = ObservableObject;
