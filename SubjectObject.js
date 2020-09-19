@@ -1,12 +1,12 @@
 'use strict';
 /* eslint-disable no-underscore-dangle */
 
-var ObservableObject = function () {
+var SubjectObject = function () {
     this._observerTable = [];
     this._propertiesBag = [];
 };
 
-ObservableObject.prototype.createProperty = function (property) {
+SubjectObject.prototype.createProperty = function (property) {
     let value = this[property]
 
     if (this.hasOwnProperty(property)) {
@@ -38,13 +38,13 @@ ObservableObject.prototype.createProperty = function (property) {
     this[property] = value
 };
 
-ObservableObject.prototype.addObserver = function (f) {
+SubjectObject.prototype.addObserver = function (f) {
     if (f && typeof f === 'function') {
         this._observerTable.push(f);
     }
 };
 
-ObservableObject.prototype.removeObserver = function (f) {
+SubjectObject.prototype.removeObserver = function (f) {
     var index = this._observerTable.indexOf(f);
 
     if (index > -1) {
@@ -52,7 +52,7 @@ ObservableObject.prototype.removeObserver = function (f) {
     }
 };
 
-ObservableObject.prototype.set = function (properyList) {
+SubjectObject.prototype.set = function (properyList) {
     var changes = [];
 
     properyList.forEach(function(keyValue) {
@@ -79,6 +79,6 @@ ObservableObject.prototype.set = function (properyList) {
     }
 };
 
-module.exports = ObservableObject
+module.exports = SubjectObject
 
 /* eslint-enable no-underscore-dangle */

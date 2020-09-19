@@ -1,15 +1,15 @@
-# ObservableObject
+# SubjectObject
 
 It's a simple Javascript class that implement the Subject part in a Observer-Subject relationship.
 
 ## How to use
 
-In order to create a Observable object (subject) you have to extend ObservableObject class, adding observable properties using 'createProperty' method
+In order to create a Observable object (subject) you have to extend SubjectObject class, adding observable properties using 'createProperty' method
 
 ```javascript 
 // Observable object
 var Foo = function() {
-    ObservableObject.call(this);
+    SubjectObject.call(this);
 
     this.createProperty('a');
     this.createProperty('b');
@@ -18,7 +18,7 @@ var Foo = function() {
     this.b = 12;
 }
 
-Foo.prototype = Object.create(ObservableObject.prototype);
+Foo.prototype = Object.create(SubjectObject.prototype);
 Foo.prototype.constructor = Foo;
 ```
 

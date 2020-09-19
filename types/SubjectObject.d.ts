@@ -3,15 +3,15 @@ declare type PropertyChange = {
     oldValue: any | undefined
 }
 
-declare type Listener = (object: ObservableObject, change: PropertyChange) => void;
+declare type Listener = (object: SubjectObject, change: PropertyChange) => void;
 
-declare class ObservableObject {
+declare class SubjectObject {
     createProperty(property: string): void;
     addObserver(observer: Listener): void;
     removeObserver(observer: Listener): void;
     set(value: PropertyChange[]): void;
 }
 
-declare module 'observable-object' {
-    export = ObservableObject
+declare module 'subject-object' {
+    export = SubjectObject
 }

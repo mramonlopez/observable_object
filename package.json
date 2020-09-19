@@ -2,8 +2,8 @@
   "name": "subject-object",
   "version": "1.0.1",
   "description": "Simple Javascript class that implement the Subject part in a Observer-Subject relationship",
-  "main": "ObservableObject.js",
-  "typings": "./types/ObservableObject.d.ts",
+  "main": "SubjectObject.js",
+  "typings": "./types/SubjectObject.d.ts",
   "directories": {
     "example": "examples"
   },
