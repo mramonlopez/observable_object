@@ -1,0 +1,26 @@
+{
+  "name": "observable-object",
+  "version": "1.0.0",
+  "description": "Simple Javascript class that implement the Subject part in a Observer-Subject relationship",
+  "main": "ObservableObject.js",
+  "typings": "./types/ObservableObject.d.ts",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mramonlopez/observable_object.git"
+  },
+  "keywords": [
+    "Observer-Subject"
+  ],
+  "author": "M. Ramón López Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mramonlopez/observable_object/issues"
+  },
+  "homepage": "https://github.com/mramonlopez/observable_object#readme"
+}

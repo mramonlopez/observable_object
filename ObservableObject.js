@@ -7,6 +7,12 @@ var ObservableObject = function () {
 };
 
 ObservableObject.prototype.createProperty = function (property) {
+    let value = this[property]
+
+    if (this.hasOwnProperty(property)) {
+        delete this[property]
+    }
+
     Object.defineProperty(this, property, {
         get: function () {
             return this._propertiesBag[property];
@@ -28,6 +34,8 @@ ObservableObject.prototype.createProperty = function (property) {
         enumerable: true,
         configurable: true
     });
+
+    this[property] = value
 };
 
 ObservableObject.prototype.addObserver = function (f) {
@@ -70,4 +78,7 @@ ObservableObject.prototype.set = function (properyList) {
         }
     }
 };
+
+module.exports = ObservableObject
+
 /* eslint-enable no-underscore-dangle */
